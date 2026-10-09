@@ -389,8 +389,35 @@ st.markdown(
     /* ── Divider ── */
     hr { border-color: var(--border) !important; margin: 1.2rem 0 !important; }
 
-    /* ── Misc ── */
-    #MainMenu, footer, header { visibility: hidden !important; }
+    /* ── Header & controls ── */
+    #MainMenu { display: none !important; }
+    footer { display: none !important; }
+    header { background: transparent !important; }
+    [data-testid="stHeader"] {
+        background: transparent !important;
+        z-index: 99 !important;
+    }
+    [data-testid="collapsedControl"] {
+        visibility: visible !important;
+        display: flex !important;
+        color: var(--teal) !important;
+        background: #FFFFFF !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 6px !important;
+        margin: 0.5rem 0 0 0.5rem !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.12) !important;
+        transition: background-color 0.15s ease !important;
+    }
+    [data-testid="collapsedControl"]:hover {
+        background: var(--teal-light) !important;
+        color: var(--teal-dark) !important;
+    }
+    [data-testid="stSidebarCollapseButton"] {
+        color: #CBD5D1 !important;
+    }
+    [data-testid="stSidebarCollapseButton"]:hover {
+        color: #FFFFFF !important;
+    }
     .block-container {
         padding-top: 0 !important;
         padding-bottom: 2rem !important;
